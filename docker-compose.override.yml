@@ -2,11 +2,22 @@ services:
   weatherapi:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_HTTP_PORTS=8080
-      - ASPNETCORE_HTTPS_PORTS=8081
+      - Consul__Address=http://consul:8500
     ports:
-      - "8080"
-      - "8081"
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+      - "5032:5032"
+  apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - GlobalConfiguration__ServiceDiscoveryProvider__Host=consul
+    ports:
+      - "2999:2999"
+  consul:
+    ports:
+      - "8500:8500"
+      - "8502:8502"
+      - "8600:8600"
+      - "8301:8301"
+      - "8302:8302"
+    environment:
+      - CONSUL_BIND_INTERFACE=eth0
+    restart: always  

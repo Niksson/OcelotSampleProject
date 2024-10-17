@@ -1,6 +1,11 @@
-@OcelotGateway_HostAddress = http://localhost:5126
+@OcelotGateway_HostAddress = http://localhost:2999
 
-GET {{OcelotGateway_HostAddress}}/weatherforecast/
+GET {{OcelotGateway_HostAddress}}/weather/current
+Accept: application/json
+
+###
+
+GET {{OcelotGateway_HostAddress}}/weather/aggregate-weather
 Accept: application/json
 
 ###

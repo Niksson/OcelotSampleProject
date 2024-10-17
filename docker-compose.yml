@@ -1,6 +1,21 @@
 services:
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: OcelotGateway/Dockerfile
+    depends_on:
+      - consul
   weatherapi:
     image: ${DOCKER_REGISTRY-}weatherapi
     build:
       context: .
       dockerfile: WeatherApi/Dockerfile
+    depends_on: 
+      - consul
+  consul:
+    container_name: "consul"
+    hostname: "consul"
+    image: "hashicorp/consul:1.19.1"
+    ports:
+      - "8500:8500"

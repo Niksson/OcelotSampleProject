@@ -1,0 +1,26 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/weatherforecast",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/weather/current",
+      "UpstreamHttpMethod": [ "GET" ],
+      "ServiceName": "weather",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "UseServiceDiscovery": true,
+      "key": "current"
+    }
+  ],
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "current"
+      ],
+      "UpstreamPathTemplate": "/weather/aggregate-weather",
+      "Priority": 1,
+      "Aggregator": "CustomAggregator"
+    }
+  ]
+}
