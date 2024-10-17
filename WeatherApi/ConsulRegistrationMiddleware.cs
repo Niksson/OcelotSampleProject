@@ -43,8 +43,6 @@ public static class ConsulRegistrationMiddleware
                         Notes = "Checks /health on "+ consulConfig.ServiceName +" Service",
                         Timeout = TimeSpan.FromSeconds(3),
                         Interval = TimeSpan.FromSeconds(10),
-                        // 2,5 Tage um das Wochenende abzudecke. Erst dann wird Consul
-                        // aus der Liste der registrierten Services entfernen. 
                         DeregisterCriticalServiceAfter = TimeSpan.FromMinutes(3600)
                     }
                 }
