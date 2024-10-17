@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApi", "WeatherApi\WeatherApi.csproj", "{9D80F94F-B66C-4E77-92E1-A4B49FA8CB57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotGateway", "OcelotGateway\OcelotGateway.csproj", "{A95E2658-3B7D-40DD-B515-9A4A94A894C4}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C68A8FEE-F712-4EC3-B71F-B2406E95BABE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D80F94F-B66C-4E77-92E1-A4B49FA8CB57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D80F94F-B66C-4E77-92E1-A4B49FA8CB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D80F94F-B66C-4E77-92E1-A4B49FA8CB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D80F94F-B66C-4E77-92E1-A4B49FA8CB57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A95E2658-3B7D-40DD-B515-9A4A94A894C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95E2658-3B7D-40DD-B515-9A4A94A894C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95E2658-3B7D-40DD-B515-9A4A94A894C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95E2658-3B7D-40DD-B515-9A4A94A894C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C68A8FEE-F712-4EC3-B71F-B2406E95BABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C68A8FEE-F712-4EC3-B71F-B2406E95BABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C68A8FEE-F712-4EC3-B71F-B2406E95BABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C68A8FEE-F712-4EC3-B71F-B2406E95BABE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1951CCA-0404-47D2-8D7A-149EE34DB8ED}
+	EndGlobalSection
+EndGlobal
